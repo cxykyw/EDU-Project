@@ -39,4 +39,11 @@ public class VideoServiceImpl implements VideoService {
     public int deleteById(int id) {
        return videoMapper.deleteById(id);
     }
+
+    @Override
+    public int save(Video video) {
+        int rows = videoMapper.save(video);
+        System.out.println("id="+video.getId());
+        return rows;
+    }
 }
